@@ -1,0 +1,20 @@
+RewriteEngine On
+# RewriteRule ^(.*)/?html$ index.php?parameter=$1
+
+RewriteRule ^home$ index.php [NC,L]
+RewriteRule ^Laptops$ categories.php?id=5 [NC,L]
+# RewriteRule ^Laptops$ categories.php?id=6 [NC,L]
+# RewriteRule ^Laptops$ categories.php?id=7 [NC,L]
+# RewriteRule ^Laptops$ categories.php?id=8 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php/$1 [NC,L]
+
+# RewriteCond %{REQUEST_URI} 1/
+# RewriteRule 1/http://localhost/php/ecom/categories.php?id=^$
+
+#RewriteCond %{REQUEST_URI} 1/
+#RewriteRule 1/ https://www.capablehub.in/categories.php?id=$1
+                                
